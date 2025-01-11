@@ -1,6 +1,6 @@
 services:
   frontend:
-    image: nginx:1.25
+    image: nginx
     volumes:
       - ./frontend:/usr/share/nginx/html:ro
     ports:
@@ -18,7 +18,7 @@ services:
     restart: always
 
   db:
-    image: postgres:15
+    image: postgres
     ports:
       - "5432:5432"
     environment:
